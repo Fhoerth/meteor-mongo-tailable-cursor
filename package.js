@@ -17,7 +17,7 @@ Npm.depends({
 Package.registerBuildPlugin({
   name: 'TSBuilder',
   sources: [
-    'ts_handler.js'
+    'meteor-mongo-taiblable-cursor/ts_handler.js'
   ],
   use: [
     'barbatus:ts-compilers@0.1.8',
