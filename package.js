@@ -27,10 +27,10 @@ Package.registerBuildPlugin({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use([
+    api.use([
       'isobuild:compiler-plugin@1.0.0'
   ], 'server');
-  api.addFiles('meteor-mongo-tailablecursor/ts_handler')
+  api.addFiles('meteor-mongo-tailablecursor/ts_handler.js');
   api.addFiles('meteor-mongo-tailable-cursor/interfaces/options.ts', 'server');
   api.addFiles('meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.ts', 'server');
 });
