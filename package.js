@@ -42,7 +42,7 @@ Package.onUse(function(api) {
 
   // Server
   api.addFiles([
-      'meteor-mongo-tailable-1cursor/interfaces/options.ts',
+      'meteor-mongo-tailable-cursor/interfaces/options.ts',
       'meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.ts'
   ], 'server');
 });
