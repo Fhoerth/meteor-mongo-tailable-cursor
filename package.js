@@ -14,11 +14,22 @@ Npm.depends({
     "mongodb": "2.1.4",
 })
 
+Package.registerBuildPlugin({
+  name: 'TSBuilder',
+  sources: [
+    'ts_handler.js'
+  ],
+  use: [
+    'barbatus:ts-compilers@0.1.8',
+    'ecmascript@0.1.4'
+  ]
+});
+
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  api.use('ecmascript');
-  api.use("meteortypescript:compiler");
-  api.addFiles('meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.js', 'server');
+  // api.use('ecmascript');
+  // api.use("meteortypescript:compiler");
+  api.addFiles('fhoerth:meteor-mongo-tailable-cursor', 'server');
 });
 
 // Package.onTest(function(api) {
