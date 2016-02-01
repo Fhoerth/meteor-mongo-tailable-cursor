@@ -3,4 +3,6 @@
 Plugin.registerCompiler({
   extensions: ['ts'],
   filenames: ['tsconfig.json']
-}, () => new TsCompiler());
+}, function() {
+    return new TsCompiler();
+});
