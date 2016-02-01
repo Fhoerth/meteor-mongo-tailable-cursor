@@ -29,7 +29,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   // api.use('ecmascript');
   // api.use("meteortypescript:compiler");
-  api.addFiles('fhoerth:meteor-mongo-tailable-cursor', 'server');
+  api.addFiles('meteor-mongo-tailable-cursor', 'server');
 });
 
 // Package.onTest(function(api) {
