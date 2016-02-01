@@ -1,3 +1,4 @@
+// Package
 Package.describe({
   name: 'fhoerth:meteor-mongo-tailable-cursor',
   version: '0.0.1',
@@ -10,10 +11,12 @@ Package.describe({
   documentation: 'README.md'
 });
 
+// Mongo driver for nodejs
 Npm.depends({
     "mongodb": "2.1.4",
 })
 
+// Ts Compiler
 Package.registerBuildPlugin({
   name: 'TSBuilder',
   sources: [
@@ -26,15 +29,25 @@ Package.registerBuildPlugin({
 });
 
 Package.onUse(function(api) {
+  // Meteor version
   api.versionsFrom('1.2.1');
-    api.use([
-      'isobuild:compiler-plugin@1.0.0'
+
+  // Dependencies
+  api.use([
+    'isobuild:compiler-plugin@1.0.0'
   ], 'server');
-  api.addFiles('meteor-mongo-tailablecursor/ts_handler.js');
-  api.addFiles('meteor-mongo-tailable-cursor/interfaces/options.ts', 'server');
-  api.addFiles('meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.ts', 'server');
+
+  // Both
+  api.addFiles('meteor-mongo-tailable-cursor/ts_handler.js');
+
+  // Server
+  api.addFiles([
+      'meteor-mongo-tailable-1cursor/interfaces/options.ts',
+      'meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.ts'
+  ], 'server');
 });
 
+// Tests
 // Package.onTest(function(api) {
 //   api.use('ecmascript');
 //   api.use('tinytest');
