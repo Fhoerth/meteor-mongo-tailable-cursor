@@ -17,7 +17,7 @@ Npm.depends({
 Package.registerBuildPlugin({
   name: 'TSBuilder',
   sources: [
-    'meteor-mongo-taiblable-cursor/ts_handler.js'
+    'meteor-mongo-tailable-cursor/ts_handler.js'
   ],
   use: [
     'barbatus:ts-compilers@0.1.8',
@@ -27,8 +27,10 @@ Package.registerBuildPlugin({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
-  // api.use('ecmascript');
-  // api.use("meteortypescript:compiler");
+  api.use([
+      'isobuild:compiler-plugin@1.0.0'
+  ], 'server');
+  api.addFiles('meteor-mongo-tailablecursor/ts_handler')
   api.addFiles('meteor-mongo-tailable-cursor/interfaces/options.ts', 'server');
   api.addFiles('meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.ts', 'server');
 });
