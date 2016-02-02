@@ -2,7 +2,7 @@
 
 Npm.require('mongodb');
 
-export class MeteorMongoTailableCursor {
+class MeteorMongoTailableCursor {
 
     options: Options;
     collection: mongodb.Collection;
