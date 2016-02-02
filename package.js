@@ -35,10 +35,10 @@ Package.onUse(function(api) {
   // Dependencies
   api.use([
     'isobuild:compiler-plugin@1.0.0'
-  ], 'server');
+], ['server', 'client']);
 
   // Both
-  api.addFiles('meteor-mongo-tailable-cursor/ts_handler.js');
+  api.addFiles('meteor-mongo-tailable-cursor/ts_handler.js', ['server', 'client']);
 
   // Server
   api.addFiles([
