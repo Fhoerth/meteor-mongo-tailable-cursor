@@ -17,7 +17,7 @@ export class MeteorMongoTailableCursor {
 
         this.query = { }
 
-        if (this.options.ns) {
+        if (this.options.ns) {
             this.query.ns = this.options.ns;
         }
 
