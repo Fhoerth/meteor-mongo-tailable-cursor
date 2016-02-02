@@ -1,6 +1,6 @@
 "use stict";
 
-interface Options {
+export interface Options {
     db: String;
     collection: String;
     ns?: String;

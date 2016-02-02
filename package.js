@@ -16,28 +16,10 @@ Npm.depends({
     "mongodb": "2.1.4",
 })
 
-// Ts Compiler
-Package.registerBuildPlugin({
-  name: 'TSBuilder',
-  sources: [
-    'plugin/registrator.js'
-  ],
-  use: [
-    'ecmascript@0.1.4',
-    'barbatus:ts-compilers@0.1.8'
-  ]
-});
-
 Package.onUse(function(api) {
   // Meteor version
   api.versionsFrom('1.2.1');
 
-  // Dependencies
-  api.use([
-    'isobuild:compiler-plugin@1.0.0'
-  ], 'server');
-
-  // Both
   // Server
   api.addFiles([
       'meteor-mongo-tailable-cursor/interfaces/options.ts',

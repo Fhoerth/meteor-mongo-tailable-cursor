@@ -1,5 +1,7 @@
 "use strict";
 
+import {Options} from "./interfaces/options";
+
 Npm.require('mongodb');
 
 class MeteorMongoTailableCursor {
