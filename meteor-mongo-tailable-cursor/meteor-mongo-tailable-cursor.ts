@@ -4,7 +4,7 @@ import {Options} from "./interfaces/options";
 
 Npm.require('mongodb');
 
-class MeteorMongoTailableCursor {
+export class MeteorMongoTailableCursor {
 
     options: Options;
     collection: mongodb.Collection;

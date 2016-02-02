@@ -1,7 +1,8 @@
 export class Hola {
-    constructor () {
+    constructor() {
         console.log("Yeas");
     }
 }
 
 var hola = new Hola();
+
