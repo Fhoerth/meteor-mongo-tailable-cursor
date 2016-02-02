@@ -30,7 +30,7 @@ Package.registerBuildPlugin({
 
 Package.onUse(function(api) {
   // Meteor version
-  api.versionsFrom('1.2.0.1');
+  api.versionsFrom('1.2.1');
 
   // Dependencies
   api.use([
