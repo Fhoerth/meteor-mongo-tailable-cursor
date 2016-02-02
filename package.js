@@ -20,11 +20,11 @@ Npm.depends({
 Package.registerBuildPlugin({
   name: 'TSBuilder',
   sources: [
-    'meteor-mongo-tailable-cursor/ts_handler.js'
+    'plugin/registrator.js'
   ],
   use: [
-    'barbatus:ts-compilers@0.1.8',
-    'ecmascript@0.1.4'
+    'ecmascript@0.1.4',
+    'barbatus:ts-compilers@0.1.8'
   ]
 });
 
@@ -35,11 +35,9 @@ Package.onUse(function(api) {
   // Dependencies
   api.use([
     'isobuild:compiler-plugin@1.0.0'
-], ['server', 'client']);
+  ], 'server');
 
   // Both
-  api.addFiles('meteor-mongo-tailable-cursor/ts_handler.js', ['server', 'client']);
-
   // Server
   api.addFiles([
       'meteor-mongo-tailable-cursor/interfaces/options.ts',
