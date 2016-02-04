@@ -24,6 +24,8 @@ Package.onUse(function(api) {
   api.addFiles([
       'meteor-mongo-tailable-cursor/meteor-mongo-tailable-cursor.js'
   ], 'server');
+
+  api.export('MeteorMongoTailableCursor', "server");
 });
 
 // Tests

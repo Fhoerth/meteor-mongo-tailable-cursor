@@ -1,10 +1,8 @@
 "use strict";
 
-import {Options} from "./interfaces/options";
-
 Npm.require('mongodb');
 
-export class MeteorMongoTailableCursor {
+var MeteorMongoTailableCursor = class {
 
     options: Options;
     collection: mongodb.Collection;
